@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "text": "Master Python skills",
+      "day": "Feb 6th",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Become a programmer",
+      "day": "Feb 7th",
+      "reminder": true
+    },
+    {
+      "text": "Go sleep",
+      "day": "Tomorrow",
+      "reminder": true,
+      "id": 4
+    }
+  ]
+}
