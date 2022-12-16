@@ -1,10 +1,21 @@
-import { Link } from "react-router-dom"; // stop page from reloading after changing  route, use Link instead of a tag
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
   return (
     <footer>
-      <p>Copyright &copy; 2021 </p>
-      <Link to="/about">About</Link>
+      {location.pathname !== "/about" && <Link to="/about">About</Link>}
+      <p>
+        Coded by{" "}
+        <a
+          href="https://szalashaska.github.io/my-homepage/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Kamil Petryniak
+        </a>
+      </p>
     </footer>
   );
 };

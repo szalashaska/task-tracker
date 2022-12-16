@@ -1,21 +1,27 @@
 {
   "tasks": [
     {
-      "id": 2,
-      "text": "Master Python skills",
-      "day": "Feb 6th",
-      "reminder": true
+      "text": "Learn python",
+      "day": "",
+      "important": true,
+      "id": 1
     },
     {
-      "id": 3,
-      "text": "Become a programmer",
-      "day": "Feb 7th",
-      "reminder": true
+      "text": "Change the world",
+      "day": "2022-12-31T16:30",
+      "important": false,
+      "id": 2
     },
     {
-      "text": "Go sleep",
-      "day": "Tomorrow",
-      "reminder": true,
+      "text": "Find Waldo",
+      "day": "2023-01-04T12:00",
+      "important": true,
+      "id": 3
+    },
+    {
+      "text": "Bussiness meeting",
+      "day": "2023-02-09T10:30",
+      "important": true,
       "id": 4
     }
   ]

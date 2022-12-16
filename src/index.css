@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,11 +12,11 @@ body {
 
 .container {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 2rem auto;
+  padding: 1.5rem;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
+  box-shadow: 0px 0px 28px -11px rgba(66, 68, 90, 1);
   border-radius: 5px;
 }
 
@@ -25,6 +25,15 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.header h1 {
+  font-family: "Bangers", cursive;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  background: linear-gradient(to bottom right, green, black, red);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn {
@@ -37,16 +46,16 @@ body {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1rem;
   font-family: inherit;
-}
-
-.btn:focus {
-  outline: none;
+  transition: all 0.3s;
 }
 
 .btn:active {
   transform: scale(0.98);
+}
+.btn:hover {
+  transform: scale(1.02);
 }
 
 .btn-block {
@@ -55,13 +64,32 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
-  margin: 5px;
-  padding: 10px 20px;
+  position: relative;
+  background: linear-gradient(to bottom right, #f4f4f4, transparent, #f4f4f4);
+  margin-block: 0.5rem;
+  padding: 1.75rem 0.75rem 1rem;
+  border-radius: 5px;
   cursor: pointer;
+  user-select: none;
 }
 
-.task.reminder {
+.task p {
+  font-size: 0.9rem;
+  color: rgb(80, 80, 80);
+}
+
+.task-controllers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.task.important {
   border-left: 5px solid green;
 }
 
@@ -73,6 +101,9 @@ body {
 
 .add-form {
   margin-bottom: 40px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #f4f4f4, transparent, #f4f4f4);
 }
 
 .form-control {
@@ -81,6 +112,7 @@ body {
 
 .form-control label {
   display: block;
+  cursor: pointer;
 }
 
 .form-control input {
@@ -89,6 +121,7 @@ body {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  font-family: inherit;
 }
 
 .form-control-check {
@@ -97,13 +130,31 @@ body {
   justify-content: space-between;
 }
 
-.form-control-check label {
-  flex: 1;
+.form-control-check input {
+  height: 20px;
+  width: 20px;
+  margin-right: 0;
+  cursor: pointer;
 }
 
-.form-control-check input {
-  flex: 2;
-  height: 20px;
+.add-form span {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.edit-form {
+  width: 100%;
+}
+
+.edit-form__input {
+  display: block;
+  margin: 0.25rem;
+  font-family: inherit;
+  width: 100%;
+  padding: 0.25rem;
+  border-radius: 5;
+  font-size: 0.8rem;
 }
 
 footer {

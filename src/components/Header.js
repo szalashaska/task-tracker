@@ -1,17 +1,15 @@
 import PropTypes from "prop-types";
-import { useLocation } from "react-router-dom"; // Helps keep track of the route we are on, here we will disable the "add/remove" button
+import { useLocation } from "react-router-dom";
 
 import Button from "./Button";
 
 const Header = ({ title, onAdd, showAdd }) => {
-  // const onClick = () => {
-  //   console.log("click");
-  // };
   const location = useLocation();
 
   return (
     <header className="header">
       <h1>{title}</h1>
+      {/* Hide button on about page */}
       {location.pathname === "/" && (
         <Button
           onClick={onAdd}
@@ -22,18 +20,12 @@ const Header = ({ title, onAdd, showAdd }) => {
     </header>
   );
 };
-// Default props, if nothing is passed
 Header.defaultProps = {
   title: "Task Tracker",
 };
 
-// Checks if passed value is string, adds required check, do not forget about default pops
 Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
-
-// Change styl inline
-//* <h1 style={headingStyle}>{title}</h1>
-// const headingStyle = { color: "red", background: "black" };
 
 export default Header;
