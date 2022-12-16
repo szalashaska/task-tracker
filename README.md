@@ -23,11 +23,11 @@ creating task or double click on existing one. Edit added task by clicking edit 
 
 Download project, install packages, run frontend server and run json-server.
 
-'''
+```
 cd .
 npm install
 ...
 npm start
-///open new terminal///
+*** Open new terminal ***
 npm run server
-'''
+```
