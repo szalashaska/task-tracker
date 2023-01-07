@@ -24,7 +24,7 @@ creating task or double click on existing one. Edit added task by clicking edit 
 Download project, install packages, run frontend server and run json-server.
 
 ```
-cd .
+cd ./task-tracker
 npm install
 ...
 npm start
